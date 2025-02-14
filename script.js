@@ -1,7 +1,8 @@
-function getFormvalue() {https://www.svgrepo.com/show/345221/three-dots.svg
+function getFormvalue(event)
     //Write your code here
-	let fname = document.forms["form1"]["fname"].value.trim()
-	let lname = document.forms["form1"]['lname'].value.trim()
+	event.preventDefault();
+	var fname = document.forms["form1"]["fname"].value.trim()
+	var lname = document.forms["form1"]['lname'].value.trim()
 
 	if(fname === '' || lname === ''){
 		alert("Both First Name and Last Name must be filled out!")
