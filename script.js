@@ -1,14 +1,18 @@
-function getFormvalue(event)
-    //Write your code here
-	event.preventDefault();
-	var fname = document.forms["form1"]["fname"].value.trim()
-	var lname = document.forms["form1"]['lname'].value.trim()
+// JavaScript Function to handle form submission
+function getFormValue(event) {
+    // Prevent the form from submitting the usual way (reloading the page)
+    event.preventDefault();
+    
+    // Access the first name and last name input fields
+    const firstName = document.querySelector('input[name="fname"]').value.trim();
+    const lastName = document.querySelector('input[name="lname"]').value.trim();
 
-	if(fname === '' || lname === ''){
-		alert("Both First Name and Last Name must be filled out!")
-		return false
-	}
+    // Concatenate first name and last name into a full name
+    const fullName = `${firstName} ${lastName}`;
 
-	alert(fname + " " + lname)
-	return false
+    // Display the full name in an alert
+    alert(fullName);
 }
+
+// Adding event listener to the form
+document.getElementById('nameForm').addEventListener('submit', getFormValue);
