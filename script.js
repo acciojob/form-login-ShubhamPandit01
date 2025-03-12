@@ -8,7 +8,7 @@ function getFormValue(event) {
     const lastName = document.querySelector('input[name="lname"]').value.trim();
 
     // Concatenate first name and last name into a full name
-    const fullName = `${firstName} ${lastName}`;
+    const fullName = `"${firstName} ${lastName}"`;
 
     // Display the full name in an alert
     alert(fullName);
